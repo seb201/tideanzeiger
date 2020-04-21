@@ -6,6 +6,10 @@ Das Projekt entstand im Rahmen einer Abschlussprüfung zum IT-Systemelektroniker
 
 # Funktion
 
+Das Wasser und Schifffahrtsamt (WSA) bietet auf seiner Webseite Wasserstände von Flüssen, Seen und Küsten an. Diese Daten werden auch im JSON Format zur Verfügung gestellt.
+Diese Daten werden von dem Microcontroller abgerufen und verarbeitet. 
+
+
 # Installation
 
 Benötigt wird ein:
@@ -28,4 +32,7 @@ Für die ordentlichen:
 - Lochrasterplatine
 - 
 
-# Programmierung 
+# Programmierung
+
+Es werden folgende Arduino Bibliotheken benötigt:
+- ArduinoJSON (unbedingt eine ältere Version als 6.0 verwenden, da sonst das compilieren fehlschlägt)
