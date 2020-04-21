@@ -28,9 +28,9 @@ Sollte sowieso jeder Bastler zu Hause haben:
 - Lötkolben
 - Litze
 
-Für die ordentlichen:
+Für die ordentlichen :smile::
 - Lochrasterplatine
-- 
+ 
 
 # Programmierung
 
