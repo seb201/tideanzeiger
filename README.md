@@ -31,6 +31,8 @@ Sollte sowieso jeder Bastler zu Hause haben:
 Für die ordentlichen :smile::
 - Lochrasterplatine
  
+![Bild 1](/bilder/IMG_0873.JPG)
+Format: ![Alt Text](url)
 
 # Programmierung
 
