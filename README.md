@@ -82,6 +82,14 @@ Es mussen folgende externe Arduino Bibliotheken installiert werden:
 - AsyncElegantOTA (für OTA Updates und Weboberfläche)
 
 
+# Weboberfläche
+
+Gibt man die IP Adresse des Tidenanzeigers in einen Webbrowser ein, wird eine 
+
+<img width="697" alt="Bildschirmfoto 2024-02-13 um 18 25 06" src="https://github.com/seb201/tideanzeiger/assets/35576062/99d51319-8ef6-4bbe-a9b1-3e74c71057fe">
+
+
+
 # Was noch verbessert werden kann
 
 - die Weboberfläche zeigt manchmal komische Werte für den Timestamp an, wahrscheinlich ein Dateiformat Problem, stört aber nicht weiter
