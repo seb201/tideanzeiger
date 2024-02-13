@@ -85,4 +85,4 @@ Es mussen folgende externe Arduino Bibliotheken installiert werden:
 # Was noch verbessert werden kann
 
 - die Weboberfläche zeigt manchmal komische Werte für den Timestamp an, wahrscheinlich ein Dateiformat Problem, stört aber nicht weiter
-- 
+
