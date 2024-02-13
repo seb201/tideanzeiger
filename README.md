@@ -1,6 +1,6 @@
-# tideanzeiger
+# Tideanzeiger
 
-Dieses Projekt visualiesiert mittels einem Microcontroller, einer LED-Matrix Anzeige und einzel ansteuerbaren LEDs den Wasserstand von Flüssen oder der Küste.
+Dieses Projekt visualiesiert mittels eines ESP32, einer LED-Matrix Anzeige und einzel ansteuerbaren LEDs den Wasserstand von Flüssen oder der Küste.
 
 Das Projekt entstand im Rahmen einer Abschlussprüfung zum IT-Systemelektroniker.
 
