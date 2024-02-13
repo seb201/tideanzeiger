@@ -7,7 +7,7 @@
 
 Dieses Projekt visualiesiert mittels eines ESP32, einer LED-Matrix Anzeige und einzel ansteuerbaren LEDs den Wasserstand von Flüssen oder der Küste.
 
-Das Projekt entstand im Rahmen einer Abschlussprüfung zum IT-Systemelektroniker.
+Das Projekt entstand im Rahmen einer Abschlussprüfung zum IT-Systemelektroniker im Jahr 2017.
 
 
 # Herkunft der Daten
@@ -63,7 +63,7 @@ Sollte sowieso jeder Bastler zu Hause haben:
 - Litze
 
 Für die ordentlichen :smile::
-- evtl. eine Lochrasterplatine
+- eine Lochrasterplatine (hab ich mir gespart, so viel ist nicht zu verkabeln)
 
 
 ![Mittel (DSC01915)](https://github.com/seb201/tideanzeiger/assets/35576062/f75ff86e-faf5-42a1-a0ce-b864af9f689d)
@@ -81,16 +81,28 @@ Es mussen folgende externe Arduino Bibliotheken installiert werden:
 - ESPAsyncWebServer (für OTA Updates und Weboberfläche)
 - AsyncElegantOTA (für OTA Updates und Weboberfläche)
 
+# Verkabelung
+
+Matrix Anzeige:
+  data muss an Pin 18 des ESPs
+  load muss an Pin 19 des ESPs
+  clk muss an Pin 21 des ESPs
+  Stromversorgung der Matrix Anzeige über 5V also VIN am ESP
+
+LEDs:
+  DATA_PIN muss an Pin 4 des ESPs
+  Stromversorgung des LEDs über 5V also VIN am ESP
+
 
 # Weboberfläche
 
-Gibt man die IP Adresse des Tidenanzeigers in einen Webbrowser ein, wird eine 
-
+Gibt man die IP Adresse des Tidenanzeigers in einen Webbrowser ein, wird eine Weboberfläche angezeigt:
 <img width="697" alt="Bildschirmfoto 2024-02-13 um 18 25 06" src="https://github.com/seb201/tideanzeiger/assets/35576062/99d51319-8ef6-4bbe-a9b1-3e74c71057fe">
-
+Auf dieser sieht man die vom Pegel übermittelten Daten und die Wlan Empfangsstärke.
+Zusätzlich kann man Firmware Updates einspielen. Der Standard Benutzername lautet Admin, das Passwort 1234, dies kann im Quellcode angepasst werden.
 
 
 # Was noch verbessert werden kann
 
-- die Weboberfläche zeigt manchmal komische Werte für den Timestamp an, wahrscheinlich ein Dateiformat Problem, stört aber nicht weiter
+- die Weboberfläche zeigt manchmal komische Werte für den Timestamp an, wahrscheinlich ein Dateityp Problem, stört aber nicht weiter
 
