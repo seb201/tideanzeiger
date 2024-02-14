@@ -13,10 +13,11 @@ Das Projekt entstand im Rahmen einer Abschlussprüfung zum IT-Systemelektroniker
 
 ## Herkunft der Daten
 
-Auf der Internetseite pegelonline.de, die vom Wasser- und Schifffahrtsamt betrieben wird, lassen sich hunderte Wasserstands Messstationen von Flüssen, Seeen und Küsten in Deutschland auslesen.
+Die zur Anzeige benötigten Daten lassen sich auf der Internetseite pegelonline.de, die vom Wasser- und Schifffahrtsamt betrieben wird auslesen.
+Dafür bietet die Seite einen Datenabruf im JSON-Format an.
 Hier kann man sich alle verfügbaren Stationen anzeigen lassen: https://pegelonline.wsv.de/webservices/rest-api/v2/stations.
-Möchte man sich die Stationen für z.B. Wilhelmshaven anzeigen lassen, sucht man einfach mit Strg+F nach der Wilhelmshaven. Falls nichts angezeigt wird, muss man oben im Browser auf "Rohdaten" klicken.<br>
-Dank einer umfangreichen Dokumentation der API Schnittstelle, ließ sich schnell die passende URL zusammenbauen.
+Möchte man sich die Stationen für z.B. Wilhelmshaven anzeigen lassen, sucht man einfach mit Strg+F nach der Wilhelmshaven. Falls nichts angezeigt wird, muss man oben im Browser auf "Rohdaten" klicken (z.B. bei Firefox ist das so, siehe Bild).<br>
+Dank einer umfangreichen Dokumentation der API Schnittstelle, lässt sich schnell die passende URL zusammenbauen.
 <br>
 <img width="967" alt="Bildschirmfoto 2024-02-13 um 17 42 12" src="https://github.com/seb201/tideanzeiger/assets/35576062/7436c607-c2f8-452e-8e74-44d66a5f01f5">
 <br>
