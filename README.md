@@ -6,7 +6,7 @@
 
 
 Dieses Projekt visualiesiert mittels eines ESP32, einer LED-Matrix Anzeige und einzel ansteuerbaren LEDs den Wasserstand von Flüssen oder der Küste.
-Es zeigt den Wasserpegel in Zentimetern auf einer Matix LED Anzeige an, 
+Es zeigt den Wasserpegel in Zentimetern auf einer Matix LED Anzeige an.
 
 Das Projekt entstand im Rahmen einer Abschlussprüfung zum IT-Systemelektroniker im Jahr 2017.<br><br>
 
