@@ -42,9 +42,9 @@ Beim Öffnen dieser URL im Browser erscheint folgende Ausgabe:<br>
 
 - **Timestamp** Das Datum und die Uhrzeit werden lediglich für die Weboberfläche benötigt, um anzuzeigen, wann die Daten zuletzt aktualisiert wurden.<br>
 - **Value** Der Wasserstand wird in Zentimetern über Pegelnull angegeben. Pegelnull liegt normalerweise 500 cm unter NN (Normal null). Diese Festlegung sorgt dafür, dass alle Wasserstände im Tidebereich (siehe Glossar) ein positives Vorzeichen haben.<br>
-- **Trend** Der Wert signalisiert, ob sich Wasser steigt (Wert = 1), abfließt (Wert = -1) oder sich der Wasserstand nicht verändert (Wert = 0).<br><br>
-- **stateMnwMhw** brauchen wir nicht
-- **stateNswHsw** brauchen wir nicht
+- **Trend** Der Wert signalisiert, ob sich Wasser steigt (Wert = 1), abfließt (Wert = -1) oder sich der Wasserstand nicht verändert (Wert = 0).<br>
+- **stateMnwMhw** brauchen wir nicht<br>
+- **stateNswHsw** brauchen wir nicht<br>
 
 
 ## Installation
