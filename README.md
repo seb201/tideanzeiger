@@ -91,7 +91,7 @@ Diese Dinge müssen individuell im Quellcode angepasst werden:<br>
 - ``if (value > 800) {`` bei über 800 cm Wasserpegel gehen alle LEDs auf rot, dieser Wert kann natürlich angepasst werden<br>
 - ``delay(300000);`` hier kann man eintragen, wie oft die Daten aktualisiert werden sollen (in Millisekunden. 300000, also 300 Sekunden, also alle 5 Minuten eine Aktualisierung<br>
 - ``http.begin("https://www.pegelonline.wsv.de/webservices/rest-api/v2/stations/f85bd17b-06c7-49bd-8bfc-ee2bf3ffea99/W/currentmeasurement.json");``<br>
-  Statt ``f85bd17b-06c7-49bd-8bfc-ee2bf3ffea99``muss man seine Station ID eintragen<br>
+  Statt ``f85bd17b-06c7-49bd-8bfc-ee2bf3ffea99`` muss man seine Station ID eintragen<br>
   
 
 ## Verkabelung
