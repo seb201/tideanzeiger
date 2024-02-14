@@ -38,11 +38,11 @@ Wenn man diese URL im Browser öffnete, kam folgende Ausgabe:<br>
   "stateNswHsw": "unknown"
 }``<br>
 
-- Timestamp ist das Datum und die Uhrzeit, welches aber nur für die Weboberfläche, um zu sehen wann die Daten zuletzt aktualisiert wurden, benötigt wird.<br>
-- Value ist der Wasserstandswert in Zentimetern über Pegelnull. Das Niveau von Pegelnull liegt in der Regel bei 500 cm unter NN (Normal null), diese Festlegung erfolgte, damit alle Wasserstände im Tidebereich (siehe Glossar) ein positives Vorzeichen haben.
-- Trend signalisiert, ob auflaufendes Wasser ist (Wert= 1), ablaufendes Wasser ist (Wert= -1) oder sich gerade nichts verändert (Wert= 0).<br><br>
-- stateMnwMhw brauchen wir nicht
-- stateNswHsw brauchen wir nicht
+- **Timestamp** ist das Datum und die Uhrzeit, welches aber nur für die Weboberfläche, um zu sehen wann die Daten zuletzt aktualisiert wurden, benötigt wird.<br>
+- **Value** ist der Wasserstandswert in Zentimetern über Pegelnull. Das Niveau von Pegelnull liegt in der Regel bei 500 cm unter NN (Normal null), diese Festlegung erfolgte, damit alle Wasserstände im Tidebereich (siehe Glossar) ein positives Vorzeichen haben.
+- **Trend** signalisiert, ob auflaufendes Wasser ist (Wert= 1), ablaufendes Wasser ist (Wert= -1) oder sich gerade nichts verändert (Wert= 0).<br><br>
+- **stateMnwMhw** brauchen wir nicht
+- **stateNswHsw** brauchen wir nicht
 
 
 ## Installation
