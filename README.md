@@ -96,14 +96,15 @@ Diese Dinge müssen individuell im Quellcode angepasst werden:<br>
 ## Verkabelung
 
 Matrix Anzeige:
-  data muss an Pin 18 des ESPs
-  load muss an Pin 19 des ESPs
-  clk muss an Pin 21 des ESPs
-  Stromversorgung der Matrix Anzeige über 5V also VIN am ESP<br>
+- data muss an Pin 18 des ESPs
+-  load muss an Pin 19 des ESPs
+- clk muss an Pin 21 des ESPs
+- Stromversorgung der Matrix Anzeige über 5V also VIN am ESP<br>
+
 
 LEDs:
-  DATA_PIN muss an Pin 4 des ESPs
-  Stromversorgung des LEDs über 5V also VIN am ESP<br>
+- DATA_PIN muss an Pin 4 des ESPs
+- Stromversorgung des LEDs über 5V also VIN am ESP<br>
 
 
 Die Matrix LEDs bestehen aus zwei Modulen, die miteinander verlötet werden müssen.<br>
