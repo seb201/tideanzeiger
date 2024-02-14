@@ -53,14 +53,14 @@ Benötigt wird ein:
 - einzel Ansteuerbare RGB-LEDs vom Typ WS2812 (Anzahl je nachdem wie lang die Anzeige werden soll. Ich verwende 54 LEDs). Ich verwende LEDs mit 30 Stück pro Meter, natürlich können auch welche mit mehr als 30 genommen werden, dann muss aber evtl. ein stärkeres Netzteil verbaut werden
 - 2X Matrix LEDs mit dem Controller MAX7219
 - einen Kasten wo der ESP32 und die Marrix LEDs einkommen. Ich habe diesen hier verwendet: <br>https://www.reichelt.de/desktop-box-129-x-64-x-41-9-mm-rnd-455-00102-p193316.html<br> allerdings scheint es den zumindest bei Reichelt nicht mehr zu geben
-- eine Holzlatte (1 cm dick und 4 cm breit) ca. 2 Meter oder weniger, je nach Deckenhöhe
+- eine Holzlatte (1 cm dick und 4 cm breit, länge je nach Deckenhöhe, ich habe 2 Meter genommen)
 - 2X bzw. 2 Meter, Alu Schienen für die LEDs. Ich habe diese hier genommen:<br> LED ALU PROFIL N ELOXIERT, 100CM INKL. ABDECKUNG OPAL ZUM EINSCHIEBEN U. 3 MONTAGECLIPS https://www.led-konzept.de/LED-Alu-Profil-N-eloxiert-100cm-inkl-Abdeckung-opal-zum-Einschieben-u-3-Montageclips
 - 5 V Netzteil, je nach Helligkeit und Anzahl der LEDs mit entsprechender Leistung (eventuell ein einfaches USB Netzteil)
 
 Sollte sowieso jeder Bastler zu Hause haben:
 - Dremel 
 - Schrauben
-- Säge
+- Säge (zum sägen der Holzlatte und der Alu Schienen)
 - Lötkolben
 - Litze
 
@@ -79,13 +79,27 @@ Es mussen folgende externe Arduino Bibliotheken installiert werden:
 - ESPAsyncWebServer (für OTA Updates und Weboberfläche)
 - AsyncElegantOTA (für OTA Updates und Weboberfläche)<br><br>
 
+Diese Dinge müssen individuell im Quellcode angepasst werden:<br>
+  ``const char* ssid = "SSID";``<br>
+  ``const char* password = "Passwort";``<br>
+  ``#define NUM_LEDS 54`` je nachdem wie viele LEDs man nutzen möchte<br>
+  ``IPAddress local_IP(192, 168, 0, 15);`` IP Adresse eintragen<br>
+  ``IPAddress gateway(192, 168, 0, 2);`` Gateway eintragen<br>
+  ``IPAddress subnet(255, 255, 255, 0);`` Subnetz eintragen<br>
+  ``IPAddress primaryDNS(192, 168, 0, 2);`` DNS eintragen<br>
+  ``if (value > 800) {`` bei über 800 cm Wasserpegel gehen alle LEDs auf rot, dieser Wert kann natürlich angepasst werden<br>
+  ``delay(300000);`` hier kann man eintragen, wie oft die Daten aktualisiert werden sollen (in Millisekunden. 300000, also 300 Sekunden, also alle 5 Minuten eine Aktualisierung<br>
+  ``http.begin("https://www.pegelonline.wsv.de/webservices/rest-api/v2/stations/f85bd17b-06c7-49bd-8bfc-ee2bf3ffea99/W/currentmeasurement.json");``<br>
+  Statt ``f85bd17b-06c7-49bd-8bfc-ee2bf3ffea99``muss man seine Station ID eintragen<br>
+  
+
 ## Verkabelung
 
 Matrix Anzeige:
   data muss an Pin 18 des ESPs
   load muss an Pin 19 des ESPs
   clk muss an Pin 21 des ESPs
-  Stromversorgung der Matrix Anzeige über 5V also VIN am ESP
+  Stromversorgung der Matrix Anzeige über 5V also VIN am ESP<br>
 
 LEDs:
   DATA_PIN muss an Pin 4 des ESPs
