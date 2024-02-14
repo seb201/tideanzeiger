@@ -117,8 +117,8 @@ Die Halterung für die Matrix LEDs kann mit einem 3D Drucker ausgedruckt werden 
 
 Gibt man die IP Adresse des Tidenanzeigers in einen Webbrowser ein, wird eine Weboberfläche angezeigt:<br>
 <img width="697" alt="Bildschirmfoto 2024-02-13 um 18 25 06" src="https://github.com/seb201/tideanzeiger/assets/35576062/99d51319-8ef6-4bbe-a9b1-3e74c71057fe"><br>
-Auf dieser sieht man die vom Pegel übermittelten Daten und die Wlan Empfangsstärke.
-Zusätzlich kann man Firmware Updates einspielen. Der Standard Benutzername lautet Admin, das Passwort 1234, dies kann im Quellcode angepasst werden.<br><br>
+Auf dieser Seite werden die Daten vom Pegel und die WLAN-Empfangsstärke angezeigt.<br>
+Außerdem können Firmware-Updates eingespielt werden. Der Standard-Benutzername lautet 'Admin' und das Passwort '1234'. Diese Zugangsdaten können im Quellcode angepasst werden.<br><br>
 
 
 ## Was noch verbessert werden kann
