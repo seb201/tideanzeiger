@@ -5,32 +5,33 @@
 <br>
 
 
-Dieses Projekt visualiesiert mittels eines ESP32, einer LED-Matrix Anzeige und einzel ansteuerbaren LEDs den Wasserstand von Flüssen oder der Küste.
-Es zeigt den Wasserpegel in Zentimetern auf einer Matix LED Anzeige an.
+Dieses Projekt visualisiert den Wasserstand von Flüssen oder der Küste mit Hilfe eines ESP32, einer LED-Matrix-Anzeige und einzeln ansteuerbaren LEDs.<br>
+Es zeigt den Wasserstand in Zentimetern auf einem LED-Matrix-Display an.<br>
+Bei Sturmflut leuchten alle LEDs rot.<br>
+Wenn die oberste LED grün leuchtet, steigt das Wasser (Flut).<br>
+Leuchtet die unterste LED grün, läuft das Wasser ab (Ebbe).<br>
+50 blaue LEDs signalisieren weithin sichtbar den Wasserstand.<br>
 
-Das Projekt entstand im Rahmen einer Abschlussprüfung zum IT-Systemelektroniker im Jahr 2017.<br><br>
+Das Projekt entstand im Rahmen einer Abschlussprüfung zum IT-Systemelektroniker im Jahr 2017.<br>
 
 
 ## Herkunft der Daten
-
-Die zur Anzeige benötigten Daten lassen sich auf der Internetseite pegelonline.de, die vom Wasser- und Schifffahrtsamt betrieben wird auslesen.
-Dafür bietet die Seite einen Datenabruf im JSON-Format an.
-Hier kann man sich alle verfügbaren Stationen anzeigen lassen: https://pegelonline.wsv.de/webservices/rest-api/v2/stations.
-Möchte man sich die Stationen für z.B. Wilhelmshaven anzeigen lassen, sucht man einfach mit Strg+F nach der Wilhelmshaven. Falls nichts angezeigt wird, muss man oben im Browser auf "Rohdaten" klicken (z.B. bei Firefox ist das so, siehe Bild).<br>
-Dank einer umfangreichen Dokumentation der API Schnittstelle, lässt sich schnell die passende URL zusammenbauen.
+Die benötigten Daten zur Anzeige lassen sich auf der Internetseite pegelonline.de auslesen.
+Diese Seite wird vom Wasser- und Schifffahrtsamt betrieben und bietet einen Datenabruf im JSON-Format an.
+Über folgenden Link können alle verfügbaren Stationen angezeigt werden: https://pegelonline.wsv.de/webservices/rest-api/v2/stations.<br>
+Wenn Sie beispielsweise die Stationen für Wilhelmshaven anzeigen möchten, suchen Sie einfach mit Strg+F nach Wilhelmshaven. Wenn keine Daten angezeigt werden, klicken Sie oben im Browser auf 'Rohdaten' (z.B. bei Firefox, siehe Bild).
+Dank der umfangreichen Dokumentation der API-Schnittstelle lässt sich schnell die passende URL zusammenstellen.
 <br>
 <img width="967" alt="Bildschirmfoto 2024-02-13 um 17 42 12" src="https://github.com/seb201/tideanzeiger/assets/35576062/7436c607-c2f8-452e-8e74-44d66a5f01f5">
 <br>
-Übersichtlicher lassen sich die Stationen hier https://www.pegelonline.wsv.de/gast/karte/standard anzeigen lassen, nur leider sieht man hier die benötigte UUID nicht.
+Die Stationen können unter https://www.pegelonline.wsv.de/gast/karte/standard übersichtlicher dargestellt werden, leider ist hier die erforderliche UUID nicht ersichtlich.
 <br>
 
 
-Die Stations ID (Identifikations Nummer) vom Alten Vorhafen ist:
-48d6b739-a79d-4f8b-b47a-50eaaa7ef1b1<br>
-So ergab sich dies hier als fertige URL:<br>
-https://pegelonline.wsv.de/webservices/rest-api/v2/stations/48d6b739-a79d-4f8b-b47a-50eaaa7ef1b1/W/currentmeasurement.json
+Die Stations-ID (Identifikationsnummer) des Alten Vorhafens lautet: 48d6b739-a79d-4f8b-b47a-50eaaa7ef1b1.
+Die fertige URL lautet: https://pegelonline.wsv.de/webservices/rest-api/v2/stations/48d6b739-a79d-4f8b-b47a-50eaaa7ef1b1/W/currentmeasurement.json.<br>
 
-Wenn man diese URL im Browser öffnete, kam folgende Ausgabe:<br>
+Beim Öffnen dieser URL im Browser erscheint folgende Ausgabe:<br>
 ``{
   "timestamp": "2017-03-31T08:06:00+02:00",
   "value": 384.0,
@@ -39,9 +40,9 @@ Wenn man diese URL im Browser öffnete, kam folgende Ausgabe:<br>
   "stateNswHsw": "unknown"
 }``<br>
 
-- **Timestamp** ist das Datum und die Uhrzeit, welches aber nur für die Weboberfläche, um zu sehen wann die Daten zuletzt aktualisiert wurden, benötigt wird.<br>
-- **Value** ist der Wasserstandswert in Zentimetern über Pegelnull. Das Niveau von Pegelnull liegt in der Regel bei 500 cm unter NN (Normal null), diese Festlegung erfolgte, damit alle Wasserstände im Tidebereich (siehe Glossar) ein positives Vorzeichen haben.
-- **Trend** signalisiert, ob auflaufendes Wasser ist (Wert= 1), ablaufendes Wasser ist (Wert= -1) oder sich gerade nichts verändert (Wert= 0).<br><br>
+- **Timestamp** Das Datum und die Uhrzeit werden lediglich für die Weboberfläche benötigt, um anzuzeigen, wann die Daten zuletzt aktualisiert wurden.<br>
+- **Value** Der Wasserstand wird in Zentimetern über Pegelnull angegeben. Pegelnull liegt normalerweise 500 cm unter NN (Normal null). Diese Festlegung sorgt dafür, dass alle Wasserstände im Tidebereich (siehe Glossar) ein positives Vorzeichen haben.<br>
+- **Trend** Der Wert signalisiert, ob sich Wasser steigt (Wert = 1), abfließt (Wert = -1) oder sich der Wasserstand nicht verändert (Wert = 0).<br><br>
 - **stateMnwMhw** brauchen wir nicht
 - **stateNswHsw** brauchen wir nicht
 
