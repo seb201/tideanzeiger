@@ -80,16 +80,16 @@ Es mussen folgende externe Arduino Bibliotheken installiert werden:
 - AsyncElegantOTA (für OTA Updates und Weboberfläche)<br><br>
 
 Diese Dinge müssen individuell im Quellcode angepasst werden:<br>
-  ``const char* ssid = "SSID";``<br>
-  ``const char* password = "Passwort";``<br>
-  ``#define NUM_LEDS 54`` je nachdem wie viele LEDs man nutzen möchte<br>
-  ``IPAddress local_IP(192, 168, 0, 15);`` IP Adresse eintragen<br>
-  ``IPAddress gateway(192, 168, 0, 2);`` Gateway eintragen<br>
-  ``IPAddress subnet(255, 255, 255, 0);`` Subnetz eintragen<br>
-  ``IPAddress primaryDNS(192, 168, 0, 2);`` DNS eintragen<br>
-  ``if (value > 800) {`` bei über 800 cm Wasserpegel gehen alle LEDs auf rot, dieser Wert kann natürlich angepasst werden<br>
-  ``delay(300000);`` hier kann man eintragen, wie oft die Daten aktualisiert werden sollen (in Millisekunden. 300000, also 300 Sekunden, also alle 5 Minuten eine Aktualisierung<br>
-  ``http.begin("https://www.pegelonline.wsv.de/webservices/rest-api/v2/stations/f85bd17b-06c7-49bd-8bfc-ee2bf3ffea99/W/currentmeasurement.json");``<br>
+- ``const char* ssid = "SSID";``<br>
+- ``const char* password = "Passwort";``<br>
+- ``#define NUM_LEDS 54`` je nachdem wie viele LEDs man nutzen möchte<br>
+- ``IPAddress local_IP(192, 168, 0, 15);`` IP Adresse eintragen<br>
+- ``IPAddress gateway(192, 168, 0, 2);`` Gateway eintragen<br>
+- ``IPAddress subnet(255, 255, 255, 0);`` Subnetz eintragen<br>
+- ``IPAddress primaryDNS(192, 168, 0, 2);`` DNS eintragen<br>
+- ``if (value > 800) {`` bei über 800 cm Wasserpegel gehen alle LEDs auf rot, dieser Wert kann natürlich angepasst werden<br>
+- ``delay(300000);`` hier kann man eintragen, wie oft die Daten aktualisiert werden sollen (in Millisekunden. 300000, also 300 Sekunden, also alle 5 Minuten eine Aktualisierung<br>
+- ``http.begin("https://www.pegelonline.wsv.de/webservices/rest-api/v2/stations/f85bd17b-06c7-49bd-8bfc-ee2bf3ffea99/W/currentmeasurement.json");``<br>
   Statt ``f85bd17b-06c7-49bd-8bfc-ee2bf3ffea99``muss man seine Station ID eintragen<br>
   
 
